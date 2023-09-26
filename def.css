@@ -1,14 +1,180 @@
+@font-face {
+    font-family: pirateFont;
+    src: url(src/Blackpearl-vPxA.ttf);
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: pirateFont, sans-serif;
+}
 table, th, td {
     border:1px solid black;
   }
-  body{
-      background-color: rgb(129, 214, 193);
+  i{
+    font-size: 25px;
   }
-  .center{
-      margin: auto;
+  body{
+    min-height: 100vh;
+    background: url('src/wp3000470.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  a:visited {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  a:hover {
+    color: rgb(198, 0, 0);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  .brighten img {
+    -webkit-filter: brightness(50%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    }
+    
+    .brighten img:hover {
+    -webkit-filter: brightness(100%);
+    }
+  .header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    text-shadow: 4px 4px 4px rgb(0, 0, 0, 0.6);
+    
+  }
+  .logo{
+    font-size: 40px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .navbar a {
+    position: relative;
+    font-size: 25px;
+    color: #000000;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+  }
+  .navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(198, 0, 0);
+    transition: .3s;
+  }
+  .navbar a:hover::before{
+    width: 100%;
+  }
+  .side-nav{
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+  }
+  table{
+    width: 100%;
+  }
+  .wrapper{
+    display: flex;
+    flex: 1;
+    width: 75%;
+    font-size: 20px;
+    
+    margin-left: 20%;
+  }
+  .mainTable{
+        width: 75%;
+        margin-left: 0%;
+       text-align: center;
+  }
+  .requirements{
+    flex: 1;
+    margin-left: 50px;
+  }
+  .videopart{
+       margin: auto;
        padding: 10px;
        text-align: center;
   }
   td, th{
       text-align: center;
   }
+
+  .container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+
+.side-ul, .side-li{
+  font-size: 15px;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.side-ul, .side-li, input{
+  margin-right: 10px;
+}
+.footer{
+  margin-left: 20%;
+	background-color: transparent;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #000000;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #000000;
+	text-decoration: none;
+	font-weight: 300;
+	color: #000000;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #000000;
+	padding-left: 8px;
+}
