@@ -1,0 +1,185 @@
+@font-face {
+    font-family: pirateFont;
+    src: url(src/Blackpearl-vPxA.ttf);
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: pirateFont, sans-serif;
+}
+table, th, td {
+    border:1px solid black;
+  }
+  i{
+    font-size: 25px;
+  }
+  body{
+    min-height: 100vh;
+    background: url('src/wp3000470.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  a:visited {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  a:hover {
+    color: rgb(198, 0, 0);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  .brighten img {
+    -webkit-filter: brightness(50%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    }
+    
+    .brighten img:hover {
+    -webkit-filter: brightness(100%);
+    }
+  .header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    text-shadow: 4px 4px 4px rgb(0, 0, 0, 0.6);
+    
+  }
+  .logo{
+    font-size: 40px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .navbar a {
+    position: relative;
+    font-size: 25px;
+    color: #000000;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+  }
+  .navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(198, 0, 0);
+    transition: .3s;
+  }
+  .navbar a:hover::before{
+    width: 100%;
+  }
+  td, th{
+      text-align: center;
+  }
+
+  .container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+
+.footer{
+  margin-left: 20%;
+	background-color: transparent;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #000000;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #000000;
+	text-decoration: none;
+	font-weight: 300;
+	color: #000000;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #000000;
+	padding-left: 8px;
+}
+.game{
+    width: 600px;
+    height: 200px;
+    border-bottom: 2px solid #000000;
+    margin: auto;
+}
+#pirate{
+    width: 50px;
+    height: 50px;
+    background-image: url(src/pirate.png);
+    background-size: 50px 50px;
+    position: relative;
+    top: 150px;
+}
+#enemy{
+    width: 50px;
+    height: 40px;
+    background-image: url(src/treasure.png);
+    background-size: 50px 40px;
+    position: relative;
+    top: 115px;
+    left: 550px;
+    animation: enemyMov 1s infinite linear;
+}
+@keyframes enemyMov{
+    0%{
+        left: 550px;
+    }
+    100%{
+        left: -30px;
+    }
+}
+.jump{
+    animation: jump 0.3s linear;
+}
+@keyframes jump{
+    0%{
+        top: 150px;
+    }
+    30%{
+        top: 80px;
+    }
+    50%{
+        top: 40px;
+    }
+    80%{
+        top: 100px;
+    }
+    100%{
+        top: 150px;
+    }
+}
