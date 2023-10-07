@@ -16,7 +16,7 @@ function jump(){
 let isAlive = setInterval(function(){
     let pirateTop = parseInt(window.getComputedStyle(pirate).getPropertyValue("top"));
     let enemyLeft = parseInt(window.getComputedStyle(enemy).getPropertyValue("left"));
-    if(enemyLeft < 50 && enemyLeft > 0 && pirateTop >= 120){
+    if(enemyLeft <= 50 && enemyLeft > 0 && pirateTop >= 70){
         alert("Game over((");
     }
 },10)

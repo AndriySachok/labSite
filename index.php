@@ -3,39 +3,13 @@
     <head>
         <title>AndrewCodes</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="def.css">
+       
     </head>
         <body>
-            <header class = "header">
-                <a href = "" class = "logo">PirateIt</a>
-                <div class = "brighten img"><img src = "src/giphy(1).gif" width = 70px></div>
-            <nav class = "navbar">
-                    <a href = "index.html">Categories</a>
-                    <a href = "">Windows</a>
-                    <a href = "">Mac</a>
-                    <a href = "">Android</a>
-                    <a href = "games.html">Games</a>
-            </nav>
-            </header>
-            <div class = "side-nav">
-                <ul class = "side-ul">
-                    <li class = "side-li">Primary Category</li>
-                    <li class = "side-li"><input type="checkbox">Windows</li>
-                    <li class = "side-li"><input type="checkbox">Mac</li>
-                    <li class = "side-li"><input type="checkbox">Linux</li>
-                    <li class = "side-li"><input type="checkbox">Android</li><br><br>
-                    <li>Sub Category</li>
-                    <li class = "side-li"><input type="checkbox">Developer Tools</li>
-                    <li class = "side-li"><input type="checkbox">Art</li>
-                    <li class = "side-li"><input type="checkbox">Audio & Music</li>
-                    <li class = "side-li"><input type="checkbox">Antivirus & Security</li>
-                    <li class = "side-li"><input type="checkbox">Graphics & Design</li>
-                    <li class = "side-li"><input type="checkbox">Tools & Utilities</li>
-                    <li class = "side-li"><input type="checkbox">Web Browsers</li>
-                    <li class = "side-li"><input type="checkbox">Network & WiFi</li>
-                    <li class = "side-li"><input type="checkbox">Operating System</li>
-                </ul>
-            </div>
+            <?php require "blocks/header.php" ?>
+            <?php require "blocks/side-nav.php" ?>
 
             <div class = "wrapper">
             <div class = "mainTable">
@@ -200,31 +174,7 @@
             </div>
             </div>
         
-            <footer class="footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="footer-col">
-                            <h4>company</h4>
-                            <ul>
-                                <li><a href="#">about us</a></li>
-                                <li><a href="#">our services</a></li>
-                                <li><a href="#">privacy policy</a></li>
-                                <li><a href="#">affiliate program</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-col">
-                            <h4>common issues</h4>
-                            <ul>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">contact us</a></li>
-                                <li><a href="#">support us</a></li>
-                                <li><a href="#">payment options</a></li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                </div>
-           </footer>
+            <?php require "blocks/footer.php" ?>
         </body>
 
 </html>

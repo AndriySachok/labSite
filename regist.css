@@ -8,9 +8,7 @@
     box-sizing: border-box;
     font-family: pirateFont, sans-serif;
 }
-table, th, td {
-    border:1px solid black;
-  }
+
   i{
     font-size: 25px;
   }
@@ -18,7 +16,7 @@ table, th, td {
     min-height: 100vh;
     background: url('src/wp3000470.jpg') no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: left;
   }
   a:visited {
     color: rgb(0, 0, 0);
@@ -81,56 +79,67 @@ table, th, td {
   .navbar a:hover::before{
     width: 100%;
   }
-  .side-nav{
-    width: 20%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 30px 15px;
+  .flex-container {
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 5%;
-  }
-  .side-ul, .side-li{
-    font-size: 15px;
-    align-items: center;
-    margin-top: 10px;
-    justify-content: flex-start;
-    cursor: pointer;
-  }
-  .side-ul, .side-li, input{
-    margin-right: 10px;
-  }
-  table{
-    width: 100%;
-  }
-  .wrapper{
-    display: flex;
+}
+
+.flex-child {
     flex: 1;
-    width: 75%;
-    font-size: 20px;
+}  
+
+.flex-child:first-child {
+    margin-right: 0px;
     
-    margin-left: 20%;
+} 
+  form {
+    position: relative;
+    text-align: center;
+    width: 70%;
+    height: 90%;
+    margin: 0 auto;
+    padding: 1em;
+    box-sizing: border-box;
+    background-image: url(src/6.png);
+    background-size: cover;
   }
-  .mainTable{
-        width: 75%;
-        margin-left: 0%;
-       text-align: center;
+  button {
+    padding: 5px;
+    font: bold 0.6em sans-serif;
+    font-size: 15px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;
+    transform: rotate(-1.5deg);
+    margin-top: 30px;
   }
-  .requirements{
-    flex: 1;
-    margin-left: 50px;
+  
+  button:after {
+    content: " >>>";
   }
-  .videopart{
-       margin: auto;
-       padding: 10px;
-       text-align: center;
+  
+  button:hover,
+  button:focus {
+    outline: none;
+    background: #000;
+    color: #fff;
   }
-  td, th{
-      text-align: center;
-  }
+  
+  input, textarea{
+  font:
+    1.4em/1.5em "handwriting",
+    cursive,
+    pirateFont;
+  border: none;
+  padding: 0 10px;
+  margin: 0;
+  width: 50%;
+  background: none;
+}
+input:focus, textarea:focus{
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
 
 .row{
 	display: flex;
@@ -142,7 +151,7 @@ ul{
 .footer{
     text-align: center;
     background-color: transparent;
-    padding: 70px 0;
+    padding: 200px 0;
   }
   .footer-col{
     margin:auto;
@@ -175,3 +184,5 @@ ul{
       color: #000000;
       padding-left: 8px;
   }
+
+

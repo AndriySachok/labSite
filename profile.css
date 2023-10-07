@@ -8,11 +8,11 @@
     box-sizing: border-box;
     font-family: pirateFont, sans-serif;
 }
-table, th, td {
-    border:1px solid black;
-  }
   i{
     font-size: 25px;
+  }
+  h1{
+    text-align: center;
   }
   body{
     min-height: 100vh;
@@ -93,45 +93,61 @@ table, th, td {
     flex-direction: column;
     margin-top: 5%;
   }
-  .side-ul, .side-li{
+
+#artem{
+    width: 200px;
+    height: 200px;
+    border-radius: 40%;
+    box-shadow: 3px 3px 6px 4px #000000;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#artem:hover{
+  transform: scaleX(-1);
+}
+
+form {
+    position: relative;
+    text-align: center;
+    width: 10%;
+    height: 10%;
+    margin: 0 auto;
+    padding: 1em;
+    box-sizing: border-box;
+  }
+  button {
+    padding: 5px;
+    font: bold 0.6em sans-serif;
     font-size: 15px;
-    align-items: center;
-    margin-top: 10px;
-    justify-content: flex-start;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: none;
     cursor: pointer;
+    transform: rotate(-1.5deg);
   }
-  .side-ul, .side-li, input{
-    margin-right: 10px;
+  
+  button:after {
+    content: " >>>";
   }
-  table{
-    width: 100%;
-  }
-  .wrapper{
-    display: flex;
-    flex: 1;
-    width: 75%;
-    font-size: 20px;
-    
-    margin-left: 20%;
-  }
-  .mainTable{
-        width: 75%;
-        margin-left: 0%;
-       text-align: center;
-  }
-  .requirements{
-    flex: 1;
-    margin-left: 50px;
-  }
-  .videopart{
-       margin: auto;
-       padding: 10px;
-       text-align: center;
-  }
-  td, th{
-      text-align: center;
+  
+  button:hover,
+  button:focus {
+    outline: none;
+    background: #000;
+    color: #fff;
   }
 
+.side-ul, .side-li{
+  font-size: 15px;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.side-ul, .side-li, input{
+  margin-right: 10px;
+}
 .row{
 	display: flex;
 	flex-wrap: wrap;

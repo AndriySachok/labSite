@@ -85,76 +85,85 @@ table, th, td {
       text-align: center;
   }
 
-  .container{
-	max-width: 1170px;
-	margin:auto;
-}
-.row{
-	display: flex;
-	flex-wrap: wrap;
-}
-ul{
-	list-style: none;
-}
-
-.footer{
-  margin-left: 20%;
-	background-color: transparent;
-    padding: 70px 0;
-}
-.footer-col{
-   width: 25%;
-   padding: 0 15px;
-}
-.footer-col h4{
-	font-size: 18px;
-	color: #000000;
-	text-transform: capitalize;
-	margin-bottom: 35px;
-	font-weight: 500;
-	position: relative;
-}
-.footer-col ul li:not(:last-child){
-	margin-bottom: 10px;
-}
-.footer-col ul li a{
-	font-size: 16px;
-	text-transform: capitalize;
-	color: #000000;
-	text-decoration: none;
-	font-weight: 300;
-	color: #000000;
-	display: block;
-	transition: all 0.3s ease;
-}
-.footer-col ul li a:hover{
-	color: #000000;
-	padding-left: 8px;
-}
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style: none;
+  }
+  .footer{
+      text-align: center;
+      background-color: transparent;
+      padding: 70px 0;
+    }
+    .footer-col{
+      margin:auto;
+      background-color: transparent;
+      text-align: center;
+      width: 30%;
+    }
+    .footer-col h4{
+        font-size: 18px;
+        color: #000000;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+    }
+    .footer-col ul li:not(:last-child){
+        margin-bottom: 10px;
+    }
+    .footer-col ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #000000;
+        text-decoration: none;
+        font-weight: 300;
+        color: #000000;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    .footer-col ul li a:hover{
+        color: #000000;
+        padding-left: 8px;
+    }
 .game{
     width: 600px;
     height: 200px;
     border-bottom: 2px solid #000000;
     margin: auto;
+    background-image: url(src/beach.png);
+    background-size: 600px 200px;
+}
+#cannon{
+  width: 80px;
+  height: 80px;
+  background-image: url(src/pirate-cannon-copy.png);
+  background-size: 80px 80px;
+  position: relative;
+  top: 120px;
+  left: 550px;
 }
 #pirate{
     width: 50px;
     height: 50px;
-    background-image: url(src/pirate.png);
+    background-image: url(src/pirate-copy.png);
     background-size: 50px 50px;
     position: relative;
-    top: 150px;
+    top: 70px;
 }
 #enemy{
-    width: 50px;
-    height: 40px;
-    background-image: url(src/treasure.png);
-    background-size: 50px 40px;
+    width: 30px;
+    height: 30px;
+    background-image: url(src/ball-copy.png);
+    background-size: 30px 30px;
     position: relative;
-    top: 115px;
+    top: 30px;
     left: 550px;
     animation: enemyMov 1s infinite linear;
 }
+
 @keyframes enemyMov{
     0%{
         left: 550px;
@@ -164,22 +173,23 @@ ul{
     }
 }
 .jump{
-    animation: jump 0.3s linear;
+    animation: jump 0.4s linear;
 }
 @keyframes jump{
     0%{
-        top: 150px;
+        top: 70px;
+        background-image: url(src/pirate-falling-copy.png);
     }
     30%{
-        top: 80px;
+        top: 30px;
     }
     50%{
-        top: 40px;
+        top: 0px;
     }
     80%{
-        top: 100px;
+        top: 40px;
     }
     100%{
-        top: 150px;
+        top: 70px;
     }
 }

@@ -8,9 +8,7 @@
     box-sizing: border-box;
     font-family: pirateFont, sans-serif;
 }
-table, th, td {
-    border:1px solid black;
-  }
+
   i{
     font-size: 25px;
   }
@@ -81,56 +79,70 @@ table, th, td {
   .navbar a:hover::before{
     width: 100%;
   }
-  .side-nav{
-    width: 20%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 30px 15px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 5%;
+  
+  form {
+    position: relative;
+    text-align: center;
+    width: 70%;
+    height: 50%;
+    margin: 0 auto;
+    padding: 1em;
+    box-sizing: border-box;
   }
-  .side-ul, .side-li{
+  button {
+    padding: 5px;
+    font: bold 0.6em sans-serif;
     font-size: 15px;
-    align-items: center;
-    margin-top: 10px;
-    justify-content: flex-start;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: none;
     cursor: pointer;
+    transform: rotate(-1.5deg);
   }
-  .side-ul, .side-li, input{
-    margin-right: 10px;
+  
+  button:after {
+    content: " >>>";
   }
-  table{
-    width: 100%;
+  
+  button:hover,
+  button:focus {
+    outline: none;
+    background: #000;
+    color: #fff;
   }
-  .wrapper{
-    display: flex;
-    flex: 1;
-    width: 75%;
-    font-size: 20px;
-    
-    margin-left: 20%;
-  }
-  .mainTable{
-        width: 75%;
-        margin-left: 0%;
-       text-align: center;
-  }
-  .requirements{
-    flex: 1;
-    margin-left: 50px;
-  }
-  .videopart{
-       margin: auto;
-       padding: 10px;
-       text-align: center;
-  }
-  td, th{
-      text-align: center;
-  }
+  input, textarea{
+    padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+  font:
+    1.4em/1.5em "handwriting",
+    cursive,
+    sans-serif;
+  border: none;
+  padding: 0 10px;
+  margin: 0;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+}
+input:focus, textarea:focus{
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+.message-box{
+  width: 70%;
+  text-align: center;
+  word-wrap: break-word;
+  margin: auto;
+  padding: 20px;
+  margin-bottom: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+}
 
 .row{
 	display: flex;
